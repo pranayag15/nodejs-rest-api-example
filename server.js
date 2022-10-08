@@ -12,6 +12,14 @@ app.get('/', function (req, res) {
    res.end(JSON.stringify(response));
 })
 
+
+app.get('/users', function (req, res) {
+   res.writeHead(200, {'Content-Type': 'application/json'});
+   var response = { "response" : "Users method calling Brooooo!!!" }
+   console.log(response);
+   res.end(JSON.stringify(response));
+})
+
 app.get('/:id', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
    var response = { "response" : "This is GET method with id=" + req.params.id + "." }
